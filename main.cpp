@@ -4,6 +4,7 @@ using namespace std;
 //MyWsl给sort函数添加注释
 void sort(int arr[], int size)
 {
+    bool flag = false;
     for(int i = 0; i < size; i++)
     {
         for(int j = i + 1; j < size; j++)
@@ -14,8 +15,11 @@ void sort(int arr[], int size)
                 int temp = arr[i];
                 arr[i] = arr[j];
                 arr[j] = temp;
+                flag = true;
             }
         }
+        if(!flag)
+            break;
     }
     for(int i = 0; i < size; i++)
     {
