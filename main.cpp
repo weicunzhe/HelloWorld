@@ -8,7 +8,8 @@ void sort(int arr[], int size)
     {
         for(int j = i + 1; j < size; j++)
         {
-            if(arr[i] > arr[j])
+	// MyWsl修改排序算法,从大到小排序
+            if(arr[i] < arr[j])
             {
                 int temp = arr[i];
                 arr[i] = arr[j];
